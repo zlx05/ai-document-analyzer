@@ -1,0 +1,480 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f1ec;
+  --ink: #20252b;
+  --muted: #697179;
+  --line: #d7d2ca;
+  --panel: #fffdf9;
+  --accent: #2f6f57;
+  --accent-strong: #204d3d;
+  --warn: #b45b35;
+  --shadow: 0 18px 50px rgba(41, 34, 24, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 7px;
+  padding: 10px 14px;
+  color: #ffffff;
+  background: var(--accent);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent-strong);
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 11px 12px;
+  color: var(--ink);
+  background: #ffffff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.authShell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.authPanel {
+  width: min(440px, 100%);
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: 30px;
+}
+
+h2 {
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.stack {
+  display: grid;
+  gap: 12px;
+}
+
+.compact {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.secondary,
+.ghost {
+  color: var(--ink);
+  background: #e6e0d7;
+}
+
+.secondary:hover,
+.ghost:hover {
+  background: #d8d0c4;
+}
+
+.fullWidth {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.notice {
+  margin: 16px 0 0;
+  padding: 10px 12px;
+  border-left: 3px solid var(--accent);
+  color: var(--accent-strong);
+  background: #eef5f1;
+}
+
+.topbar {
+  width: min(1280px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.topActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.layout {
+  width: min(1280px, calc(100% - 32px));
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 18px;
+}
+
+.sidebar,
+.panel,
+.projectHero {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.sidebar {
+  padding: 16px;
+  align-self: start;
+}
+
+.projectList {
+  margin-top: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.projectList button {
+  width: 100%;
+  padding: 12px;
+  display: grid;
+  gap: 4px;
+  color: var(--ink);
+  text-align: left;
+  background: #f4f0e9;
+}
+
+.projectList button.active {
+  color: #ffffff;
+  background: var(--accent);
+}
+
+.projectList span {
+  color: inherit;
+  opacity: 0.75;
+  font-size: 13px;
+}
+
+.workspace {
+  display: grid;
+  gap: 18px;
+}
+
+.initializer {
+  display: grid;
+  gap: 14px;
+}
+
+.proposal {
+  display: grid;
+  gap: 12px;
+}
+
+.proposal label {
+  display: grid;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.proposalTasks {
+  display: grid;
+  gap: 8px;
+}
+
+.proposalTask {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 80px;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbf9f4;
+}
+
+.proposalTask small {
+  color: var(--muted);
+  text-align: right;
+}
+
+.projectHero {
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.projectHero p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 82px);
+  gap: 8px;
+}
+
+.metrics span {
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-align: center;
+  background: #f8f5ef;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.metrics strong {
+  display: block;
+  color: var(--ink);
+  font-size: 22px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.panel {
+  padding: 18px;
+}
+
+.panel.wide {
+  grid-column: 1 / -1;
+}
+
+.empty {
+  padding: 32px;
+}
+
+.inlineForm {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: start;
+}
+
+.agentForm {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 130px;
+  gap: 10px;
+  align-items: start;
+}
+
+.importForm {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.list,
+.taskList,
+.runList,
+.toolTrace {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.listItem,
+.task,
+.runItem,
+.runDetail,
+.toolCall {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbf9f4;
+}
+
+.listItem {
+  padding: 12px;
+}
+
+.listItem p,
+.muted {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.task {
+  padding: 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.task strong,
+.task span {
+  display: block;
+}
+
+.task span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.task.doing {
+  border-left: 4px solid #b58a2f;
+}
+
+.task.done {
+  border-left: 4px solid var(--accent);
+  color: #818181;
+  background: #ece9e4;
+}
+
+.task.done strong {
+  text-decoration: line-through;
+}
+
+.taskActions {
+  display: flex;
+  gap: 6px;
+}
+
+.taskActions button {
+  padding: 7px 9px;
+  color: var(--ink);
+  background: #e8e0d4;
+  font-size: 12px;
+}
+
+.doneText {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.agentResult {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1fr);
+  gap: 16px;
+}
+
+.runItem {
+  padding: 12px;
+  display: grid;
+  gap: 5px;
+  color: var(--ink);
+  text-align: left;
+  background: #fbf9f4;
+}
+
+.runItem:hover {
+  color: #ffffff;
+}
+
+.runItem span {
+  color: inherit;
+  opacity: 0.75;
+  font-size: 13px;
+}
+
+.runDetail {
+  padding: 14px;
+}
+
+.runDetail p {
+  white-space: pre-wrap;
+}
+
+.toolCall {
+  margin-top: 10px;
+  padding: 10px;
+  display: grid;
+  gap: 5px;
+}
+
+.toolCall span {
+  color: var(--muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .layout,
+  .grid,
+  .agentResult,
+  .projectHero {
+    grid-template-columns: 1fr;
+  }
+
+  .projectHero,
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .metrics {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .inlineForm,
+  .agentForm,
+  .importForm,
+  .task {
+    grid-template-columns: 1fr;
+  }
+}
